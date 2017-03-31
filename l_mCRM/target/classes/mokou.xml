@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="l_mCRM" extends="struts-default">
+		<!-- 拦截器的配置，如果需要的话 -->
+		<!-- 
+		<interceptors>
+		<interceptor name="test" class="com.zr.interceptor.MyInterceptor"></interceptor>
+		<interceptor-stack name="abc">
+		<interceptor-ref name="test" ></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="abc"></default-interceptor-ref>
+		 -->
+		<action name="login" class="com.zr.action.LoginAction" method="login">
+			<result name="success">main.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<action name="showFuncs" class="com.zr.action.ShowFunAction" method="showFuncs">
+		<result name="error">login.jsp</result>
+		</action>
+		<action name="quit" class="com.zr.action.QuitAction" method="quit">
+		</action>
+	</package>
+</struts>

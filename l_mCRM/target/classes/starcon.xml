@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="system_admin" namespace="/system_admin" extends="struts-default">
+		<action name="user_control" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success" >user_control.jsp</result>
+		</action>
+		<action name="superSU_Pro" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">superSU_Pro.jsp</result>
+		</action>		
+	</package>
+	<package name="distribution_sites_staff" namespace="/distribution_sites_staff" extends="struts-default">
+		<action name="order_query" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success" >order_query.jsp</result>
+		</action>
+		<action name="order_entry" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">order_entry.jsp</result>
+		</action>		
+		<action name="delivery_price" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">delivery_price.jsp</result>
+		</action>		
+		<action name="delivery_scope" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">delivery_scope.jsp</result>
+		</action>		
+	</package>
+	<package name="distribution_sites_administrator" namespace="/distribution_sites_administrator" extends="struts-default">
+		<action name="report_generation" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">report_generation.jsp</result>
+		</action>
+		<action name="superSU_Pro" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">superSU_Pro.jsp</result>
+		</action>
+		<action name="user_control" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">user_control.jsp</result>
+		</action>
+	
+	</package>
+	<package name="motorman" namespace="/motorman" extends="struts-default">
+		<action name="alter_goods_state" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">alter_goods_state.jsp</result>
+		</action>
+	</package>
+	<package name="province_firm_staff" namespace="/province_firm_staff" extends="struts-default">
+		<action name="way" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">way.jsp</result>
+		</action>
+		<action name="distribution_sites" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">distribution_sites.jsp</result>
+		</action>
+		<action name="car" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">car.jsp</result>
+		</action>
+	</package>
+	<package name="province_firm_administrator" namespace="/province_firm_administrator" extends="struts-default">
+		<action name="delivery_price" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">delivery_price.jsp</result>
+		</action>
+		<action name="report_generation" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">report_generation.jsp</result>
+		</action>
+		<action name="superSU_Pro" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">superSU_Pro.jsp</result>
+		</action>
+		<action name="user_control" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">user_control.jsp</result>
+		</action>
+	</package>
+	<package name="client" namespace="/client" extends="struts-default">
+		<action name="order_query" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">order_query.jsp</result>
+		</action>
+		<action name="order_entry" class="com.zr.action.ShowViewAction" method="showView">
+			<result name="success">order_entry.jsp</result>
+		</action>
+	</package>
+	<!-- 对配送点员工的增删改查 -->
+	<package name="staff" namespace="/distribution_sites_administrator" extends="struts-default">
+		<action name="showStaff" class="com.zr.action.NewlyIincreasedStaffAction" method="getStaff">
+			<result name="error" type="redirect">../login</result>
+		</action>
+		<action name="insertStaff" class="com.zr.action.NewlyIincreasedStaffAction" method="addStaff">
+			<result name="error" type="redirect">../login</result>
+		</action>
+		<action name="modifyStaff" class="com.zr.action.NewlyIincreasedStaffAction" method="modifyStaff">
+			<result name="error" type="redirect">../login</result>
+		</action>
+		<action name="deleteStaff" class="com.zr.action.NewlyIincreasedStaffAction" method="deleteStaffById">
+			<result name="error" type="redirect">../login</result>
+		</action>
+
+	</package>
+</struts>

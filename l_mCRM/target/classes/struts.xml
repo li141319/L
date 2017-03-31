@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 开发模式 可以不用重启tomcat -->
+     <constant name="struts.devMode" value="true" />
+     <!-- 热部署 -->
+     <constant name="struts.configuration.xml.reload" value="true"/>
+
+	<include file="mokou.xml"></include>
+	<include file="starcon.xml"></include>
+</struts>
